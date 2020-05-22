@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>codeforces contest view</title>
+	<meta charset="utf-8">
+	<style>
+		table,
+		th,
+		td {
+			padding: 10px;
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+	</style>
+	<script type="text/javascript" src="api.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script type="text/javascript" src='search.js'>
+	</script>
+</head>
+<body>
+	<h1>Codeforces contests view</h1>
+	
+	<ul class="nav nav-tabs">
+		<li class="nav-item">
+			<a class="nav-link " href="index.html">Seus contests</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link active" href="#">Buscar contests</a>
+		</li>
+	</ul>
+	<div class="selectors">
+		<label>	
+			<input type="checkbox" id="div1">
+			div 1
+		</label>
+		<br>
+		<label>	
+			<input type="checkbox" id="div2">
+			div 2
+		</label>
+		<br>
+		<label>	
+			<input type="checkbox" id="div3">
+			div 3
+		</label>
+		<br>
+		<label>	
+			<input type="checkbox" id="div4">
+			div 4
+		</label>
+		<div id="noContest"></div>
+		<table id='mytable' name='mytable'></table>
+		<button onclick="getContests('contest.list', createTable)">Buscar contests</button>
+		<button onclick="save()">salvar</button>
+	</div>
+</body>
+</html>
